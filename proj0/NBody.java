@@ -33,6 +33,9 @@ public class NBody
         int nBodies = bodies.length;
         String background = new String("images/starfield.jpg");
 
+        PlayMidi player = new PlayMidi("audio/2001.mid");
+        player.playMidi();
+
         StdDraw.enableDoubleBuffering();
         StdDraw.setScale(-radius, radius);
 
@@ -67,5 +70,7 @@ public class NBody
                           bodies[i].xxPos, bodies[i].yyPos, bodies[i].xxVel,
                           bodies[i].yyVel, bodies[i].mass, bodies[i].imgFileName);
         }
+
+        player.stopMidi();
     }
 }

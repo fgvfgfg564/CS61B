@@ -1,0 +1,1 @@
+Flik.isSameNumber(x, y) raises false when x==y and x>=128.
